@@ -11,11 +11,16 @@ var translator = (function(fr) {
     var inputText = inputEmt.value;
     var inputWords = inputText.split(" ");
     for (var i = 0; i < inputWords.length; i++) {
+      var flag = 0;
       for (var j in frenchWords) {
-        if (inputWords[i] === j)
+        if (inputWords[i] === j) {
           inputWords[i] = frenchWords[j];
+          flag = 1;
+        }
       }
-    }
+      if (flag === 0) {
+        inputWords[i] = "";
+      }
     return inputWords.join(" ");
   };
   return fr;
