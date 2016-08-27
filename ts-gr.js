@@ -40,11 +40,8 @@ var translator = (function(german){
 return german;
 })(translator || {});
 
-////*****************************************************************************************////
-////////////Code listener for btn click then calls method within anonymous function////////////
 
-document.getElementById('german').addEventListener("click", function(){translator.outputValue()});
-document.getElementById('german').addEventListener("click", function(){translator.printValue()});
+
 
 
 
