@@ -4,6 +4,7 @@ var chineseBtn = document.getElementById("chinese");
 var frenchBtn = document.getElementById("french");
 var germanBtn = document.getElementById("german");
 var spanishBtn = document.getElementById("spanish");
+
 var outputText = "";
 
 chineseBtn.addEventListener("click", function(){
