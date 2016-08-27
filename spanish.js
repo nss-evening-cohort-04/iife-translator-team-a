@@ -2,12 +2,12 @@ var translator = (function(spanish){
   
 
   var  spanishWords = {
-    merry: "feliz",
+    merry: "Feliz",
     christmas: "Navidad",
-    and: "y",
-    happy: "prospero",
-    new: "nuevo",
-    year: "ano"
+    and: "Y",
+    happy: "Prospero",
+    new: "Nuevo",
+    year: "Ano"
   };
 
  spanish.getSp = function(){
