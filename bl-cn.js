@@ -1,26 +1,23 @@
-var inputEmt = document.getElementById("message");
-var outputEmt = document.getElementById("translated");
-var chineseBtn = document.getElementById("chinese");
 
-var translator = function() {
+var translator = (function(cn) {
   var  chineseWords = {
-    merry: "A",
-    christmas: "B",
-    and: "C",
-    happy: "D",
-    new: "E",
-    year: "F"
+    merry: "愉快",
+    christmas: "圣诞",
+    and: "和",
+    happy: "快乐",
+    new: "新",
+    year: "年"
   };
-  var inputText = inputEmt.value;
-  var inputWords = inputText.split(" ");
-      for (var i = 0; i < inputWords.length; i++) {
-        for (var j in chineseWords) {
-          if (inputWords[i] === j)
-            inputWords[i] = chineseWords[j];
-        }
-      } 
-
-outputEmt.innerHTML = inputWords.join(" ");
-};
-
-chineseBtn.addEventListener("click", translator);
+  cn.getCn = function(){
+    var inputText = inputEmt.value;
+    var inputWords = inputText.split(" ");
+    for (var i = 0; i < inputWords.length; i++) {
+      for (var j in chineseWords) {
+        if (inputWords[i] === j)
+          inputWords[i] = chineseWords[j];
+      }
+    } 
+    return inputWords.join(" ");
+  };
+  return cn;
+})(translator || {});
