@@ -21,6 +21,7 @@ var translator = (function(fr) {
       if (flag === 0) {
         inputWords[i] = "";
       }
+    }
     return inputWords.join(" ");
   };
   return fr;

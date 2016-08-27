@@ -10,7 +10,7 @@ var translator = (function(spanish){
     year: "Ano"
   };
 
- spanish.getSp = function(){
+  spanish.getSp = function(){
     var inputText = inputEmt.value;
     var inputWords = inputText.split(" ");
     for (var i = 0; i < inputWords.length; i++) {
@@ -24,9 +24,8 @@ var translator = (function(spanish){
       if (flag === 0) {
         inputWords[i] = "";
       }
+    }
     return inputWords.join(" ");
   };
   return spanish;
-
-
 })(translator || {})
