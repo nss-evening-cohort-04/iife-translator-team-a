@@ -17,10 +17,10 @@ frenchBtn.addEventListener("click", function(){
 	outputEmt.innerHTML = outputText;
 	}
 );
-germanBtn.addEventListener("click", function(){
-	outputText = translator.getGr();
-	outputEmt.innerHTML = outputText;
-	}
+germanBtn.addEventListener("click",function(){
+	translator.outputValue();
+}
+	
 );
 spanishBtn.addEventListener("click", function(){
 	outputText = translator.getSp();
