@@ -54,3 +54,8 @@ input {
 .center {
   text-align: center;
 }
+
+.fancy {
+  font-family: "Oleo Script";
+  font-size: 2em;
+}
