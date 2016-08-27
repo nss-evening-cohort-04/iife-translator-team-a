@@ -1,11 +1,11 @@
 //german translator augmented from translator iife
 var translator = (function(german){
 
-	var germanTxt = {merry:"frohlich",
-	christmas:"weihnactea",
-	and:"und",
-	happy:"glucklich",
-	new:"neu",
+	var germanTxt = {merry:"Frohlich",
+	christmas:"Weihnactea",
+	and:"Und",
+	happy:"Glucklich",
+	new:"Neu",
 	year: "Jahr"};
 
 	
@@ -27,8 +27,7 @@ var translator = (function(german){
 
 		var str = document.getElementById('message').value;
 		var arr = str.split(' ');
-		console.log("entered the outputValue method");
-
+		
 		for(var i=0; i<str.length; i++){
 			// translatedStr += translator.getValue(arr[i]);
 			arr[i] = translator.getValue(arr[i]);
