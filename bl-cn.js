@@ -9,7 +9,7 @@ var translator = (function(cn) {
     year: "年"
   };
   cn.getCn = function(){
-    var inputText = inputEmt.value;
+    var inputText = inputEmt.value.toLowerCase();
     var inputWords = inputText.split(" ");
     for (var i = 0; i < inputWords.length; i++) {
           inputWords[i] = chineseWords[inputWords[i]];

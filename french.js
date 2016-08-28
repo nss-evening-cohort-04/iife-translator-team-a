@@ -8,7 +8,7 @@ var translator = (function(fr) {
     year: "Annee"
   };
   fr.getFr = function(){
-    var inputText = inputEmt.value;
+    var inputText = inputEmt.value.toLowerCase();
     var inputWords = inputText.split(" ");
     for (var i = 0; i < inputWords.length; i++) {
       var flag = 0;
