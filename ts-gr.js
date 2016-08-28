@@ -33,7 +33,7 @@ var translator = (function(german){
 			arr[i] = translator.getValue(arr[i]);
 		}
 
-		document.getElementById('translated').innerHTML = arr.join(' ');
+		return arr.join(' ');
 	}
 
 return german;
