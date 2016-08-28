@@ -1,57 +1,42 @@
 var inputEmt = document.getElementById("message");
 var outputEmt = document.getElementById("translated");
-var chineseBtn = document.getElementById("chinese");
-var frenchBtn = document.getElementById("french");
-var germanBtn = document.getElementById("german");
-var spanishBtn = document.getElementById("spanish");
+var langEmt = document.getElementById("language");
+var translateBtn = document.getElementById("translate");
 var outputText = "";
 
-chineseBtn.addEventListener("click", function(){
-	checkInput();
-	outputText = translator.getCn();
-	outputEmt.innerHTML = outputText;
+translateBtn.addEventListener("click", function(){
+	var inputText = inputEmt.value.toLowerCase();
+  var inputWords = inputText.split(" ");
+	checkInput(inputWords);
 	var msg = new SpeechSynthesisUtterance();
-	msg.text = outputText;
-	msg.lang = 'zh-CN';
-	window.speechSynthesis.speak(msg);
+	switch (langEmt.value) {
+		case "chinese":
+			outputText = translator.getCn(inputWords);
+			msg.lang = 'zh-CN';
+			break;
+		case "french":
+			outputText = translator.getFr(inputWords);
+			msg.lang = 'fr-FR';
+			break;
+		case "spanish":
+			outputText = translator.getSp(inputWords);
+			msg.lang = 'de-DE';
+			break;
+		case "german":
+			outputText = translator.getGr(inputWords);
+			msg.lang = 'es-ES';
+			break;
 	}
-);
-frenchBtn.addEventListener("click", function(){
-	checkInput();
-	outputText = translator.getFr();
 	outputEmt.innerHTML = outputText;
-	var msg = new SpeechSynthesisUtterance();
 	msg.text = outputText;
-	msg.lang = 'fr-FR';
 	window.speechSynthesis.speak(msg);
-	}
-);
-germanBtn.addEventListener("click", function(){
-	checkInput();
-	outputText = translator.getGr();
-	outputEmt.innerHTML = outputText;
-	var msg = new SpeechSynthesisUtterance();
-	msg.text = outputText;
-	msg.lang = 'de-DE';
-	window.speechSynthesis.speak(msg);
-	}
-);
-spanishBtn.addEventListener("click", function(){
-	checkInput();
-	outputText = translator.getSp();
-	outputEmt.innerHTML = outputText;
-	var msg = new SpeechSynthesisUtterance();
-	msg.text = outputText;
-	msg.lang = 'es-ES';
-	window.speechSynthesis.speak(msg);
-	}
+}
 );
 
-function checkInput() {
-	var inputText = inputEmt.value;
-  var inputWords = inputText.split(" ");
+
+function checkInput(inputWords) {
   for (var i = 0; i < inputWords.length; i++) {
-    switch (inputWords[i].toLowerCase()) {
+    switch (inputWords[i]) {
     	case "merry":
     	case "christmas":
     	case "and":

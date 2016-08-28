@@ -14,12 +14,18 @@
     <input type="text" name="" value="" size="50" placeholder="Type your greeting here" id="message">
   </div>
   <div class="space">
-    <button type="" id="chinese">Chinese</button>
-    <button type="" id="french">French</button>
-    <button type="" id="spanish">Spanish</button>
-    <button type="" id="german">German</button>
+      <h3 class="space">Select language you want to translate to:</h3>
+      <select  id="language">
+        <option value="chinese">Chinese</option> 
+        <option value="french">French</option> 
+        <option value="spanish">Spanish</option>
+        <option value="german">German</option>
+      </select>
   </div>
-  <h3 class="space">Your message is as follows:</h3>
+  <div class="space">
+    <button type="" id="translate">Translate</button>
+  </div>
+  <h3 class="space">Your translated message is as follows:</h3>
 
   <div id="translated" class="space fancy"></div>
 </div>

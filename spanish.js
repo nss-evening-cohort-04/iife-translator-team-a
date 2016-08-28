@@ -10,9 +10,7 @@ var translator = (function(spanish){
     year: "Ano"
   };
 
-  spanish.getSp = function(){
-    var inputText = inputEmt.value.toLowerCase();
-    var inputWords = inputText.split(" ");
+  spanish.getSp = function(inputWords){
     for (var i = 0; i < inputWords.length; i++) {
       var flag = 0;
       for (var j in spanishWords) {
