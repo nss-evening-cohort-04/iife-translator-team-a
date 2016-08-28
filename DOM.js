@@ -20,11 +20,11 @@ translateBtn.addEventListener("click", function(){
 			break;
 		case "spanish":
 			outputText = translator.getSp(inputWords);
-			msg.lang = 'de-DE';
+			msg.lang = 'es-ES';
 			break;
 		case "german":
 			outputText = translator.getGr(inputWords);
-			msg.lang = 'es-ES';
+			msg.lang = 'de-DE';
 			break;
 	}
 	outputEmt.innerHTML = outputText;
