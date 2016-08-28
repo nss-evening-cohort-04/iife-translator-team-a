@@ -12,16 +12,7 @@ var translator = (function(cn) {
     var inputText = inputEmt.value;
     var inputWords = inputText.split(" ");
     for (var i = 0; i < inputWords.length; i++) {
-      var flag = 0;
-      for (var j in chineseWords) {
-        if (inputWords[i] === j) {
-          inputWords[i] = chineseWords[j];
-          flag = 1;
-        }
-      }
-      if (flag === 0) {
-        inputWords[i] = "";
-      }
+          inputWords[i] = chineseWords[inputWords[i]];
     } 
     return inputWords.join(" ");
   };
