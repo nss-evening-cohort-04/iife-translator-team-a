@@ -28,7 +28,7 @@ frenchBtn.addEventListener("click", function(){
 );
 germanBtn.addEventListener("click", function(){
 	checkInput();
-	outputText = translator.getGr();
+	outputText = translator.outputValue();
 	outputEmt.innerHTML = outputText;
 	var msg = new SpeechSynthesisUtterance();
 	msg.text = outputText;

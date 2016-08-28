@@ -12,7 +12,7 @@ var translator = (function(german){
 
 
 	german.printValue = function(){
-		var str = document.getElementById('message').value;
+		var str = document.getElementById('message').value.toLowerCase();
 		console.log(str);
 		
 		var arr = str.split(' ');
@@ -25,7 +25,7 @@ var translator = (function(german){
 	german.outputValue = function(){
 		var translatedStr = '';
 
-		var str = document.getElementById('message').value;
+		var str = document.getElementById('message').value.toLowerCase();
 		var arr = str.split(' ');
 		
 		for(var i=0; i<str.length; i++){
@@ -33,7 +33,7 @@ var translator = (function(german){
 			arr[i] = translator.getValue(arr[i]);
 		}
 
-		document.getElementById('translated').innerHTML = arr.join(' ');
+		return arr.join(' ');
 	}
 
 return german;
